@@ -9,6 +9,7 @@
      <title>Sahil Trading</title>
      <style>
            *{margin:0; padding:0; list-style:none; text-decoration:none;}
+                                      /*Navigation Bar*/
            nav{height:60px; background:	#FAF9F6;}
            nav img{width:160px; position:absolute; top:6px; left:2%;}
            nav ul{float:right; margin-right:25px;}
@@ -20,60 +21,23 @@
            label #cancel{color:black; font-size:20px; float:left; line-height:80px; margin-left:20px; cursor:pointer; margin-top:-10px; display:none;}
            label #search{line-height:80px; font-size: 20px; margin-right:40px; margin-top:-10px;}
            #check{display:none;}
-
-
-            #search{float:right; margin-left:130px; color:black;}
-          @media (max-width:1118px){
-               nav img{
-                    left:8%;
-               }
-          }
-
-          @media (max-width:944px){
-               nav img{
-                    left:28%;
-                    top:5px;
-                    width:160px;
-               }
-               nav ul li a{
-                    font-size:17px;
-               }
-          }
-
-          @media (max-width:860px){
-           label #btn{
-               display:block;
-               
+           #search{float:right; margin-left:130px; color:black;}
+           @media (max-width:1118px){
+                                     nav img{left:8%;}
            }
-           ul{
-               position:fixed;
-               width:100%;
-               height:100vh;
-               background:#34495e;
-               top:60px;
-               left:-100%;
-               transition: all .5s;
-               text-align:center;
+           @media (max-width:944px){
+                                   nav img{left:28%; top:5px; width:160px;}
+                                   nav ul li a{font-size:17px;}
            }
-           nav ul li{
-               display:block;
-               margin:20px 0;
-               line-height:30px;
+           @media (max-width:860px){
+                                   label #btn{display:block;}
+                                   ul{position:fixed; width:100%; height:100vh; background:#34495e; top:60px; left:-100%; transition: all .5s; text-align:center;}
+                                   nav ul li{display:block; margin:20px 0; line-height:30px;}
+                                   nav ul li a{font-size:20px;}
+                                   #check:checked ~ ul{left:0%;}
+                                   #check:checked ~ label #btn{display:none;}
+                                   #check:checked ~ label #cancel{display:block;}
            }
-               nav ul li a{
-                    font-size:20px;
-               }
-               #check:checked ~ ul{
-                    left:0%;
-               }
-
-               #check:checked ~ label #btn{
-                     display:none;
-               }
-               #check:checked ~ label #cancel{
-                     display:block;
-               }
-          }
           
          
          
