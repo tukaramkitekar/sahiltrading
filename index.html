@@ -7,9 +7,10 @@
      <link rel="stylesheet" href="assets/fontawesome/css/all.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
      <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="stylesheet" href="plugins/mixup-icon/style.css">
      <title>Sahil Trading</title>
      <style>
-           *{margin:0; padding:0; list-style:none; text-decoration:none; font-family: sans-serif;}
+           *{margin:0; padding:0; list-style:none; text-decoration:none; font-family: sans-serif; box-sizing: border-box;}
                                       /*Navigation Bar*/
            nav{height:60px; background:	#FAF9F6;}
            nav img{width:160px; position:absolute; top:6px; left:2%;}
@@ -76,93 +77,200 @@
 
 
 
+           @import url(https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
 
-
-           
-
-.services{
-
-text-align: center;
-font-family: 'Roboto', sans-serif;
-}
-.services h1{
-display: inline-block;
-text-transform: uppercase;
-border-bottom: 4px solid #3498db;
-font-size: 20px;
-padding-bottom: 10px;
-margin-top: 60px;
-}
-.cen{
-max-width: 1200px;
-margin: auto;
-overflow: hidden;
-padding: 20px;
-}
-.service{
-display: inline-block;
-width: calc(100% / 3);
-margin: 0 -2px;
-padding: 20px;
-box-sizing: border-box;
-cursor: pointer;
-transition: 0.4s;
-  font-family: 'Roboto', sans-serif;
-}
-
-.service i{
-color: #3498db;
-font-size: 34px;
-margin-bottom: 30px;
-}
-.service h2{
-font-size: 18px;
-text-transform: uppercase;
-font-weight: 500;
-margin: 0;
-}
-.service p{
-
-font-size: 15px;
-font-weight: bold;
-
-}
-@media screen and (max-width: 800px) {
-.service{
-  width: 50%;
-
-}
-}
-@media screen and (max-width: 500px) {
-.service{
-  width: 100%;
-
-}
+::selection
+{
+    color: #f34242;
+    background: #fff;
 }
 
 
 
-.wrapper {
-margin:auto;
-max-width: 900px;
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #1c2135;
+    font-family: 'Dosis';
 }
-.video-container {
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
+section
+{
+    display: block;
+    padding: 30px 0;
 }
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
- }
+
+.container
+{
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.sec-title
+{
+    margin-bottom: 60px;
+    text-align: center;
+}
+.sec-title span
+{
+    color: #f34242;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .1em;
+    font-weight: bold;
+    display: block;
+    line-height: 1em;
+}
+.sec-title h3
+{
+    line-height: 1.1;
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 600;
+}
+.content
+{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.service
+{
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.service-box
+{
+    background: #191d30;
+    display: block;
+    position: relative;
+    padding: 55px 0;
+    margin-bottom: 30px;
+    box-shadow: none;
+    text-align: center;
+    transition: all .4s ease;
+}
+
+.service-box:hover
+{
+    box-shadow: 0px 10px 25px rgba(243,66,66,0.25);
+}
+.service-box::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f34242;
+    transform: scaleY(0);
+    transition-property: transform;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    transform-origin: 50% 0;
+
+}
+.service-box:hover::before
+{
+    transform: scaleY(1);
+    transition-timing-function: 
+    cubic-bezier(0.52,1.64,.37,.66);
+}
+.icon-box
+{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+}
+.service-box .icon-box::before
+{
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: rgba(243,66,66,0.1);
+    top: -15px;
+    left: -15px;
+    border-radius: 50%;
+    opacity: 1;
+    transition:all .4s ease;
+
+}
+
+.service-box:hover .icon-box::before
+{
+    background: rgba(255,255,255,0.1);
+}
+.service-box h3
+{
+    margin: 0;
+    transition:all .4s ease;
+    color: #f34242;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 28px;
+    line-height: 1.1;
+    text-align: center;
+    position: relative;
+}
+.service-box i
+{
+    color: #f34242;
+    transition:all .4s ease;
+    font-size: 62px;
+    position: relative;
+}
+
+.service-box:hover i,
+.service-box:hover h3
+{
+    color: #fff;
+}
 
 
-@media screen and (max-width: 900px) {
-.wrapper{margin:10px;}
+
+
+
+/******responsive*************/
+@media (max-width: 768px)
+{
+    .service
+    {
+        width: 50%;
+        float: left;
+    }
+    .sec-title
+    {
+        margin-bottom: 35px;
+    }
+    .service-box
+    {
+        padding: 44px 0;
+    }
+
 }
+
+@media (max-width: 414px)
+{
+    .sec-title h3
+    {
+        font-size: 25px;
+    }
+
+}
+
+
+
 
 
 
@@ -238,70 +346,119 @@ max-width: 900px;
 
 
 
+<section>
+  <div class="container">
+      
+      <div class="sec-title">
+          <span>CHECKOUT FEATURES</span>
+          <h3>Mixup is the only app you'll need</h3>
+      </div>
+
+      <div class="content">
+
+          <div class="service">
+              <div class="service-box">
+                  <div class="icon-box">
+                      <i class="mixup-icon-smartphone"></i>
+                  </div>
+                  <h3>Free Trial</h3>
+              </div>
+          </div>
+
+          <div class="service">
+              <div class="service-box">
+                  <div class="icon-box">
+                      <i class="mixup-icon-data"></i>
+                  </div>
+                  <h3>Secure Payment</h3>
+              </div>
+          </div>
+
+          <div class="service">
+              <div class="service-box">
+                  <div class="icon-box">
+                      <i class="mixup-icon-wheel-outline"></i>
+                  </div>
+                  <h3>No Setup</h3>
+              </div>
+          </div>
+
+          <div class="service">
+              <div class="service-box">
+                  <div class="icon-box">
+                      <i class="mixup-icon-business"></i>
+                  </div>
+                  <h3>24th Support</h3>
+              </div>
+          </div>
 
 
 
-<div class="services">
-  <h1>Our Speciality</h1>
-  <br><br>
+          <div class="service">
+              <div class="service-box">
+                  <div class="icon-box">
+                      <i class="mixup-icon-locked-mobile-phone"></i>
+                  </div>
+                  <h3>Quick Access</h3>
+              </div>
+          </div>
 
-  <div class="wrapper">
-    <div class="video-container">
-      <iframe width="560" height="325" src="https://www.youtube.com/embed/zKpuU-dK3VY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+          <div class="service">
+              <div class="service-box">
+                  <div class="icon-box">
+                      <i class="mixup-icon-smartphone"></i>
+                  </div>
+                  <h3>Track map</h3>
+              </div>
+          </div>
+
+          <div class="service">
+              <div class="service-box">
+                  <div class="icon-box">
+                      <i class="mixup-icon-user-checked"></i>
+                  </div>
+                  <h3>Manage User</h3>
+              </div>
+          </div>
+
+          <div class="service">
+              <div class="service-box">
+                  <div class="icon-box">
+                      <i class="mixup-icon-check"></i>
+                  </div>
+                  <h3>Daily Update</h3>
+              </div>
+          </div>
+
+
+      </div>
+
+
   </div>
+</section>    
 
-  <div class="cen">
-    <div class="service">
-      <h2><span class="material-symbols-outlined" style="font-size:40px">
-        trending_up
-        </span></h2>
-      <h2>Intraday</h2>
-      <p>Buying and selling have to occur within one trading session on the same day.</p>
-    </div>
 
-    <div class="service">
-      <span class="material-symbols-outlined" style="font-size:40px">
-        candlestick_chart
-        </span>
-      <h2>Future & Option</h2>
-      <p>Invest in Future and option with the help of our experience.</p>
-    </div>
 
-    <div class="service">
-      <span class="material-symbols-outlined" style="font-size:40px">
-        query_stats
-        </span>
-      <h2>Positional Trading</h2>
-      <p>Positional trading is an upscale version of intraday trading.</p>
-    </div>
 
-    <div class="service">
-      <span class="material-symbols-outlined" style="font-size:40px">
-        analytics
-        </span>
-      <h2>Technical Analysis</h2>
-      <p>We are expert in the Technical Analysis.We Want to make you Too.</p>
-    </div>
 
-    <div class="service">
-      <span class="material-symbols-outlined"  style="font-size:40px">
-        monitoring
-        </span>
-      <h2>Trading Plan & Setup</h2>
-      <p>We will help you to make Trading Plan and Setup To make you sucessed.</p>
-    </div>
 
-    <div class="service">
-      <span class="material-symbols-outlined" style="font-size:40px">
-        campaign
-        </span>
-      <h2>IPO Investing</h2>
-      <p>Investing in the new companies to  make your money extra.</p>
-    </div>
-  </div>
-</div>
-<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
