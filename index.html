@@ -79,61 +79,82 @@
 .hero-btn{display:inline-block; text-decoration: none; color:#fff; border:1px solid #fff; padding:12px 34px; font-size:16px; background:transparent; position:relative; cursor: pointer;}
 
 
-.about{ background: #1c2135;}
 
 
-.about .row{
-    display: flex;
-    align-items: center;
-    gap:2rem;
- 
-    flex-wrap: wrap;
-    padding:2rem 0;
-    padding-bottom: 3rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services{
+
+text-align: center;
+font-family: 'Roboto', sans-serif;
+background: #1c2135;
+}
+.services h1{
+display: inline-block;
+text-transform: uppercase;
+border-bottom: 4px solid #3498db;
+font-size: 20px;
+padding-bottom: 10px;
+margin-top: 60px;
+color:white;
+}
+.cen{
+max-width: 1200px;
+margin: auto;
+overflow: hidden;
+padding: 20px;
+}
+.service{
+display: inline-block;
+width: calc(100% / 3);
+margin: 0 -2px;
+padding: 20px;
+box-sizing: border-box;
+cursor: pointer;
+transition: 0.4s;
+  font-family: 'Roboto', sans-serif;
 }
 
-.about .row .video-container{
-    flex:1 1 40rem;
-    position: relative;
+.service i{
+color: #3498db;
+font-size: 34px;
+margin-bottom: 30px;
 }
-
-.about .row .video-container video{
-    width:100%;
-    border:1.5rem solid #fff;
-    border-radius: .5rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    height: 100%;
-    object-fit: cover;
+.service h2{
+font-size: 18px;
+text-transform: uppercase;
+font-weight: 500;
+margin: 0;
 }
+.service p{
 
-.about .row .video-container h3{
-    position: absolute;
-    top:50%; transform: translateY(-50%);
-    font-size: 3rem;
-    background:#fff;
-    width:100%;
-    padding:1rem 2rem;
-    text-align: center;
-    mix-blend-mode: screen;
+font-size: 15px;
+font-weight: bold;
+
 }
+@media screen and (max-width: 800px) {
+.service{
+  width: 50%;
 
-.about .row .content{
-    flex:1 1 40rem;
 }
-
-.about .row .content h3{
-    font-size: 3rem;
-    color:#333;
 }
+@media screen and (max-width: 500px) {
+.service{
+  width: 100%;
 
-.about .row .content p{
-    font-size: 1.5rem;
-    color:#999;
-    padding:.5rem 0;
-    padding-top: 1rem;
-    line-height: 1.5;
 }
-
+}
 
      </style>
 </Head>
@@ -211,33 +232,67 @@
 
 
 
+<div class="services">
+    <h1>Our Speciality</h1>
+    <br><br>
 
+    <div class="wrapper">
+      <div class="video-container">
+        <iframe width="560" height="325" src="https://www.youtube.com/embed/gTzBkskO-f4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
 
+    <div class="cen">
+      <div class="service">
+        <h2><span class="material-symbols-outlined" style="font-size:40px">
+          trending_up
+          </span></h2>
+        <h2>Intraday</h2>
+        <p>Buying and selling have to occur within one trading session on the same day.</p>
+      </div>
 
+      <div class="service">
+        <span class="material-symbols-outlined" style="font-size:40px">
+          candlestick_chart
+          </span>
+        <h2>Future & Option</h2>
+        <p>Invest in Future and option with the help of our experience.</p>
+      </div>
 
+      <div class="service">
+        <span class="material-symbols-outlined" style="font-size:40px">
+          query_stats
+          </span>
+        <h2>Positional Trading</h2>
+        <p>Positional trading is an upscale version of intraday trading.</p>
+      </div>
 
-    <section class="about" id="about">
+      <div class="service">
+        <span class="material-symbols-outlined" style="font-size:40px">
+          analytics
+          </span>
+        <h2>Technical Analysis</h2>
+        <p>We are expert in the Technical Analysis.We Want to make you Too.</p>
+      </div>
 
-        <h1 class="heading"> <span> about </span> us </h1>
-    
-        <div class="row">
-    
-            <div class="video-container">
-                <video src="assets/vid1.mp4" controls ></video>
-                
-            </div>
-    
-            <div class="content">
-                <h3>why choose us?</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque sit nemo pariatur corporis perspiciatis aspernatur a ullam repudiandae autem asperiores quibusdam omnis commodi alias repellat illum, unde optio temporibus.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ea est commodi incidunt magni quia molestias perspiciatis, unde repudiandae quidem.</p>
-                <a href="#" class="btn">learn more</a>
-            </div>
-    
-        </div>
-    
-    </section>
+      <div class="service">
+        <span class="material-symbols-outlined"  style="font-size:40px">
+          monitoring
+          </span>
+        <h2>Trading Plan & Setup</h2>
+        <p>We will help you to make Trading Plan and Setup To make you sucessed.</p>
+      </div>
 
+      <div class="service">
+        <span class="material-symbols-outlined" style="font-size:40px">
+          campaign
+          </span>
+        <h2>IPO Investing</h2>
+        <p>Investing in the new companies to  make your money extra.</p>
+      </div>
+    </div>
+  </div>
+<br><br>
 
 
 
